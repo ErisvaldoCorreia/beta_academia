@@ -1,3 +1,4 @@
+import 'package:beta_academia/onboarding.page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,12 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Scaffold(
-        body: Center(
-            child: Text('Home',
-          ),
-        ),
-      ),
+      home: Onboarding(),
     );
   }
 }
