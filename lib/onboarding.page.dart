@@ -18,14 +18,52 @@ class _OnboardingState extends State<Onboarding> {
           Container(
             height: MediaQuery.of(context).size.height * 0.2,
             width: double.infinity,
-            color: Colors.green,
+            //color: Colors.green,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
-                  color: Colors.red,
+                  //color: Colors.white,
+                  margin: EdgeInsets.only(top: 20),
                   height: MediaQuery.of(context).size.height * 0.07,
                   width: MediaQuery.of(context).size.height * 0.40,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Wall',
+                            style: GoogleFonts.nunito(
+                              color: Color(0xffec3337),
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 5,
+                            ),
+                          ),
+                          Text(
+                            'Academia',
+                            style: GoogleFonts.nunito(
+                              color: Colors.black,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 5,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Text(
+                        'Musculação, Dança e Lutas',
+                        style: GoogleFonts.nunito(
+                          color: Colors.grey[700],
+                          fontSize: 10,
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 2,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -45,25 +83,52 @@ class _OnboardingState extends State<Onboarding> {
           Container(
             height: MediaQuery.of(context).size.height * 0.2,
             width: double.infinity,
-            color: Colors.green,
+            //color: Colors.green,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 SizedBox(
-                  height: 5,
+                  height: 20,
                 ),
                 Container(
-                  color: Colors.red,
+                  //color: Colors.red,
                   height: MediaQuery.of(context).size.height * 0.06,
                   width: MediaQuery.of(context).size.height * 0.40,
+                  child: FlatButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Nova Conta',
+                      style: GoogleFonts.nunito(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black,
+                        letterSpacing: 4,
+                      ),
+                    ),
+                  ),
                 ),
                 Container(
-                  color: Colors.orange,
                   height: MediaQuery.of(context).size.height * 0.06,
                   width: MediaQuery.of(context).size.height * 0.40,
+                  child: FlatButton(
+                    onPressed: () {},
+                    color: Color(0xffec3337),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Text(
+                      'Acessar Conta',
+                      style: GoogleFonts.nunito(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                        letterSpacing: 4,
+                      ),
+                    ),
+                  ),
                 ),
                 SizedBox(
-                  height: 5,
+                  height: 20,
                 ),
               ],
             ),
