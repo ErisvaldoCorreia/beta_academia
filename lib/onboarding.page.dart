@@ -16,9 +16,19 @@ class _OnboardingState extends State<Onboarding> {
       body: Column(
         children: [
           Container(
-            height: 150,
+            height: MediaQuery.of(context).size.height * 0.2,
             width: double.infinity,
-            //color: Colors.green,
+            color: Colors.green,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Container(
+                  color: Colors.red,
+                  height: MediaQuery.of(context).size.height * 0.07,
+                  width: MediaQuery.of(context).size.height * 0.40,
+                ),
+              ],
+            ),
           ),
           Expanded(
             child: buildPageBoard(),
@@ -33,9 +43,30 @@ class _OnboardingState extends State<Onboarding> {
             ),
           ),
           Container(
-            height: 150,
+            height: MediaQuery.of(context).size.height * 0.2,
             width: double.infinity,
-            //color: Colors.green,
+            color: Colors.green,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                SizedBox(
+                  height: 5,
+                ),
+                Container(
+                  color: Colors.red,
+                  height: MediaQuery.of(context).size.height * 0.06,
+                  width: MediaQuery.of(context).size.height * 0.40,
+                ),
+                Container(
+                  color: Colors.orange,
+                  height: MediaQuery.of(context).size.height * 0.06,
+                  width: MediaQuery.of(context).size.height * 0.40,
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+              ],
+            ),
           ),
         ],
       ),
@@ -52,13 +83,12 @@ class _OnboardingState extends State<Onboarding> {
         },
         itemBuilder: (_, i) {
           return Padding(
-            padding:
-                const EdgeInsets.symmetric(horizontal: 40.0, vertical: 30.0),
+            padding: const EdgeInsets.symmetric(horizontal: 40.0),
             child: Column(
               children: [
                 SvgPicture.asset(
                   content[i].image,
-                  height: 280,
+                  height: MediaQuery.of(context).size.height * 0.36,
                 ),
                 Text(
                   content[i].title,
